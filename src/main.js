@@ -9,7 +9,7 @@ Vue.config.productionTip = false
 
 Vue.use(Vuex)
 
-window.store = new Vuex.Store({
+let store = new Vuex.Store({
   state: {
     count: 0
   },
@@ -25,5 +25,6 @@ new Vue({
   el: '#app',
   router,
   components: { App },
+  store,
   template: '<App/>'
 })

@@ -1,7 +1,7 @@
 <template>
-  <div class="hello">
+  <div class="notepad">
     <h1>{{ count }}</h1>
-    <button @click="increment">+1</button>
+    <textarea name="" id="" cols="30" rows="10"></textarea>
   </div>
 </template>
 
@@ -9,7 +9,7 @@
 import {mapState, mapMutations} from 'vuex'
 
 export default {
-  name: 'Counter',
+  name: 'Notepad',
   computed: mapState(['count']),
   methods: {
     // placeholder - usually we will have local methods here then spread the store methods into it
@@ -23,18 +23,4 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
-  font-weight: normal;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
 </style>
