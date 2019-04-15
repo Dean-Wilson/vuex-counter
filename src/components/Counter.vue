@@ -1,15 +1,21 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <h1>{{ count }}</h1>
+    <button @click="increment">+1</button>
   </div>
 </template>
 
 <script>
 export default {
   name: 'Counter',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js Apple'
+  computed: {
+    count() {
+      return window.store.state.count
+    }
+  },
+  methods: {
+    increment () {
+      window.store.commit('increment')
     }
   }
 }
