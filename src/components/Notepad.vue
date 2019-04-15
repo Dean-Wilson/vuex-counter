@@ -1,6 +1,7 @@
 <template>
   <div class="notepad">
-    <h1>{{ count }}</h1>
+    <hr>
+    <h1>Notepad Component with Count = {{ count }}</h1>
     <textarea name="" id="" cols="30" rows="10"></textarea>
   </div>
 </template>
@@ -23,4 +24,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+    hr {
+        margin-top: 30px;
+    }
 </style>
