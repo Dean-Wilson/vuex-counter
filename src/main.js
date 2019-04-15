@@ -4,27 +4,17 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import App from './App'
 import router from './router'
+import store from './store/store'
 
 Vue.config.productionTip = false
 
 Vue.use(Vuex)
-
-let store = new Vuex.Store({
-  state: {
-    count: 0
-  },
-  mutations: {
-    increment (state) {
-      state.count++
-    }
-  }
-})
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
   components: { App },
-  store,
+  store: new Vuex.Store(store),
   template: '<App/>'
 })
