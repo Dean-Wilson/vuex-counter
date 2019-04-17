@@ -2,21 +2,25 @@
   <div class="hello">
     <h1>{{ count }}</h1>
     <button @click="increment">+1</button>
+    <p>Square root is {{sqrt}}</p>
   </div>
 </template>
 
 <script>
-import {mapState, mapMutations} from 'vuex'
+import {mapState, mapGetters, mapActions} from 'vuex'
 
 export default {
   name: 'Counter',
-  computed: mapState(['count']),
+  computed: {
+    ...mapState(['count']),
+    ...mapGetters(['sqrt'])
+  },
   methods: {
     // placeholder - usually we will have local methods here then spread the store methods into it
     custom () {
       return true
     },
-    ...mapMutations(['increment'])
+    ...mapActions(['increment'])
   }
 }
 </script>
